@@ -1,0 +1,15 @@
+### macOS ###
+.DS_Store
+.AppleDouble
+.LSOverride
+.Spotlight-V100
+.Trashes
+._*
+
+### IntelliJ IDEA / Android Studio ###
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+captures/
