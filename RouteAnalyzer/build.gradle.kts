@@ -1,7 +1,7 @@
 plugins {
     kotlin("jvm") version "2.1.10"
     kotlin("plugin.serialization") version "2.1.10"
-    application
+    id("com.github.johnrengelman.shadow") version "7.1.2"
 }
 
 group = "com.routeranalyzer"
@@ -23,6 +23,8 @@ tasks.test {
     useJUnitPlatform()
 }
 
-application {
-    mainClass.set("MainKt")
+tasks.jar {
+    manifest {
+        attributes["Main-Class"] = "com.routeranalyzer.MainKt"
+    }
 }
