@@ -31,6 +31,8 @@ fun main() {
         val waypoints = waypointsParser.parse(csvFile)
         val analyzer = RouteAnalyzer(waypoints)
 
+        if (waypoints.isEmpty()) throw IllegalStateException("Should have at least one waypoint")
+
         val maxDistanceResult = analyzer.maxDistanceFromStart(waypoints.first())
         val mostFrequentedAreaResult = analyzer.mostFrequentedArea(
             config.mostFrequentedAreaRadiusKm ?: maxOf(
