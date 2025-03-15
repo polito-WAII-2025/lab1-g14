@@ -33,7 +33,7 @@ fun main() {
 
         val maxDistanceResult = analyzer.maxDistanceFromStart(waypoints.first())
         val mostFrequentedAreaResult = analyzer.mostFrequentedArea(
-            maxOf(
+            config.mostFrequentedAreaRadiusKm ?: maxOf(
                 0.1,
                 maxDistanceResult.distanceKm * 0.1
             )

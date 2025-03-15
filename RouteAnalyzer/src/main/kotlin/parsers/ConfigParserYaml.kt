@@ -9,11 +9,11 @@ class ConfigParserYaml: IParser<CustomParameters> {
         val yaml = Yaml()
         val data: Map<String, Any> = yaml.load(inputStream)
         val parameters = CustomParameters(
-            data["geofenceCenterLatitude"] as Double,
-            data["geofenceCenterLongitude"] as Double,
-            data["earthRadiusKm"] as Double,
-            data["geofenceRadiusKm"] as Double,
-            data["mostFrequentedAreaRadiusKm"] as Double?
+            geofenceCenterLatitude = data["geofenceCenterLatitude"] as Double,
+            geofenceCenterLongitude = data["geofenceCenterLongitude"] as Double,
+            earthRadiusKm = data["earthRadiusKm"] as Double,
+            geofenceRadiusKm = data["geofenceRadiusKm"] as Double,
+            mostFrequentedAreaRadiusKm = data["mostFrequentedAreaRadiusKm"] as Double?
         )
         return parameters
     }
