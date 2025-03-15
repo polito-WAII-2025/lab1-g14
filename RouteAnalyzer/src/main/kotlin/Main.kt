@@ -20,8 +20,8 @@ private val json = Json {
 
 fun main() {
 
-    val csvFile = FileReader("data/${Config.WAYPOINTS_FILE}")
-    val configFile = FileReader("data/${Config.PROPERTIES_FILE}")
+    val csvFile = FileReader("${Config.MOUNT_FOLDER}/${Config.WAYPOINTS_FILE}")
+    val configFile = FileReader("${Config.MOUNT_FOLDER}/${Config.PROPERTIES_FILE}")
 
     val waypointsParser = WaypointsParserCSV()
     val configParser = ConfigParserYaml()
@@ -53,7 +53,7 @@ fun main() {
             waypointsOutsideGeofence = waypointsOutsideGeofenceResult,
         )
 
-        File("data/${Config.OUTPUT_FILE}").writeText(json.encodeToString (out))
+        File("${Config.MOUNT_FOLDER}/${Config.OUTPUT_FILE}").writeText(json.encodeToString (out))
 
     } finally {
         csvFile.close()

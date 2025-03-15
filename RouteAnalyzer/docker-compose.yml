@@ -4,4 +4,4 @@ services:
     container_name: analyzer
     command: ["java", "-jar", "/app/app.jar"]
     volumes:
-      - ./data:/app/data
+      - ./evaluation:/app/evaluation
