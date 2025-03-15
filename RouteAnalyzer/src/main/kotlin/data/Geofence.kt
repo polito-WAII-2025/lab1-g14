@@ -2,10 +2,10 @@ package com.routeranalyzer.data
 
 data class Geofence(
     val point: Waypoint,
-    val geofenceRadius: Double
+    val geofenceRadiusKm: Double
 ) {
     fun isInRadius(point: Waypoint): Boolean {
         val distance = this.point.calculateDistance(point)
-        return distance < this.geofenceRadius
+        return distance < this.geofenceRadiusKm
     }
 }

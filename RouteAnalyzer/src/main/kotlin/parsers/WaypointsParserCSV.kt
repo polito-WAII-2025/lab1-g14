@@ -7,7 +7,7 @@ import java.io.InputStreamReader
 
 class WaypointsParserCSV : IParser<List<Waypoint>> {
     override fun parse(inputStream: InputStreamReader): List<Waypoint> {
-        val csvFormat = CSVFormat.DEFAULT.builder().setSkipHeaderRecord(true).build()
+        val csvFormat = CSVFormat.DEFAULT.builder().setDelimiter(";").build()
         val parser = CSVParser(inputStream, csvFormat)
         val wayPoints = mutableListOf<Waypoint>()
 

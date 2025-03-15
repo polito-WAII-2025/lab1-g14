@@ -29,7 +29,7 @@ class RouteAnalyzer(
             val areaGeofence = Geofence(areaPoint, areaRadius)
             var entries = 0
             waypoints.forEach { if(areaGeofence.isInRadius(it)) entries++ }
-            if (mostFrequentAreaEntries >= entries){
+            if (mostFrequentAreaEntries <= entries){
                 mostFrequentAreaEntries = entries
                 mostFrequentArea = areaPoint
             }
@@ -50,7 +50,7 @@ class RouteAnalyzer(
         }
         return  WaypointsOutsideGeofenceResult(
             centralWaypoint = geofence.point,
-            areaRadiusKm = geofence.geofenceRadius,
+            areaRadiusKm = geofence.geofenceRadiusKm,
             waypoints = outWayPoints,
             count = outWayPoints.size
         )

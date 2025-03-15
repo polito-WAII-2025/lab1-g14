@@ -21,8 +21,8 @@ data class Waypoint(
             return GlobalCoordinates(latitude, longitude)
         }
 
-    fun calculateDistance(positionWrapper: Waypoint): Double {
-        return calculateDistance(positionWrapper.position)
+    fun calculateDistance(position: Waypoint): Double {
+        return calculateDistance(position.position)
     }
 
     private fun calculateDistance(position: GlobalCoordinates): Double {
