@@ -32,12 +32,12 @@ fun main() {
         val analyzer = RouteAnalyzer(waypoints)
 
         val maxDistanceResult = analyzer.maxDistanceFromStart(waypoints.first())
-        val mostFrequentedAreaResult = analyzer.mostFrequentedArea(config.mostFrequentedAreaRadiusKm.let {
+        val mostFrequentedAreaResult = analyzer.mostFrequentedArea(
             maxOf(
                 0.1,
                 maxDistanceResult.distanceKm * 0.1
             )
-        })
+        )
         val waypointsOutsideGeofenceResult = analyzer.waypointsOutsideGeofence(
             Geofence(
                 point = Waypoint(
