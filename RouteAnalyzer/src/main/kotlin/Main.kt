@@ -44,7 +44,8 @@ fun main() {
             Geofence(
                 point = Waypoint(
                     latitude = config.geofenceCenterLatitude,
-                    longitude = config.geofenceCenterLongitude
+                    longitude = config.geofenceCenterLongitude,
+                    timestamp = 0.0
                 ),
                 geofenceRadiusKm = config.geofenceRadiusKm
             )
