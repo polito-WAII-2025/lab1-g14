@@ -9,7 +9,7 @@ import org.gavaghan.geodesy.GlobalCoordinates
 data class Waypoint(
     val latitude: Double,
     val longitude: Double,
-    val timestamp: Double? = null
+    val timestamp: Double = 0.0
 ) {
     companion object {
         private val calculator = GeodeticCalculator()
