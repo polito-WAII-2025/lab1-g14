@@ -13,17 +13,17 @@
 			"longitude": 7.6685,
 			"timestamp": 1.7415360117313022E12
 		},
-		"areaRadiusKm": 5.0,
-		"entriesCount": 12
+		"areaRadiusKm": 1.0,
+		"entriesCount": 7
 	},
 	"waypointsOutsideGeofence": {
 		"centralWaypoint": {
-			"latitude": 45.07,
-			"longitude": 7.68,
+			"latitude": 45.0,
+			"longitude": 7.0,
 			"timestamp": 0.0
 		},
 		"areaRadiusKm": 0.4,
-		"count": 11,
+		"count": 12,
 		"waypoints": [
 			{
 				"latitude": 45.06367,
@@ -64,6 +64,11 @@
 				"latitude": 45.07573,
 				"longitude": 7.68639,
 				"timestamp": 1.7415360110566082E12
+			},
+			{
+				"latitude": 45.06857,
+				"longitude": 7.67644,
+				"timestamp": 1.7415360113886924E12
 			},
 			{
 				"latitude": 45.06308,
