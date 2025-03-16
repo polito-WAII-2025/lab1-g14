@@ -1,0 +1,7 @@
+services:
+  app:
+    build: .
+    container_name: analyzer
+    command: ["java", "-jar", "/app/app.jar"]
+    volumes:
+      - ./evaluation:/app/evaluation
